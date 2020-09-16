@@ -68,106 +68,18 @@ get_header();
           <?php else : ?>
             <?php get_template_part( 'content', 'none' ); ?>
           <?php endif; ?>
-          <!--
-          <div class="col-lg-6 post">
-            <a href="#" class="img-modal" title="Some really cool article">
-              <img class="img-fluid" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=600&q=80" />
-            </a>
-            <article class="post-excerpt">
-              <header>
-                <a href="#">
-                  <h3>
-                    Hello World
-                  </h3>
-                </a>
-                <p class="post-meta">
-                  by <a href="#" class="link">Denis Gusev</a> on <span>14.09.2020</span>
-                </p>
-              </header>
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </article>
-          </div>
-          <div class="col-lg-6 post">
-            <a href="#" class="img-modal" title="Some really cool article">
-              <img class="img-fluid" src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=600&q=80" />
-            </a>
-            <article class="post-excerpt">
-              <header>
-                <a href="#">
-                  <h3>
-                    Hello World
-                  </h3>
-                </a>
-                <p class="post-meta">
-                  by <a href="#" class="link">Denis Gusev</a> on <span>14.09.2020</span>
-                </p>
-              </header>
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </article>
-          </div>
-          <div class="col-lg-6 post">
-            <a href="#" class="img-modal" title="Some really cool article">
-              <img class="img-fluid" src="https://images.unsplash.com/photo-1474524955719-b9f87c50ce47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=600&q=80" />
-            </a>
-            <article class="post-excerpt">
-              <header>
-                <a href="#">
-                  <h3>
-                    Hello World
-                  </h3>
-                </a>
-                <p class="post-meta">
-                  by <a href="#" class="link">Denis Gusev</a> on <span>14.09.2020</span>
-                </p>
-              </header>
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </article>
-          </div>
-          <div class="col-lg-6 post">
-            <a href="#" class="img-modal" title="Some really cool article">
-              <img class="img-fluid" src="https://images.unsplash.com/photo-1482192505345-5655af888cc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&h=600&q=80" />
-            </a>
-            <article class="post-excerpt">
-              <header>
-                <a href="#">
-                  <h3>
-                    Hello World
-                  </h3>
-                </a>
-                <p class="post-meta">
-                  by <a href="#" class="link">Denis Gusev</a> on <span>14.09.2020</span>
-                </p>
-              </header>
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </article>
-          </div>
 
-          <div class="col-12">
-            <ul class="nav nav-pills">
-              <li role="presentation" class="active">
-                <a href="#">1</a>
-              </li>
-              <li role="presentation">
-                <a href="#">2</a>
-              </li>
-              <li role="presentation">
-                <a href="#">3</a>
-              </li>
-            </ul>
-          </div>
-
--->
-
+          <?php
+            /* Load numbered pagination */
+            bootstrap_numbered_pagination();
+          ?>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </div> <!-- end row -->
+  </div> <!-- end container-fluid -->
+</section> <!-- end section -->
+
+<?php
+  /* Load footer.php */
+  get_footer();
+?>
