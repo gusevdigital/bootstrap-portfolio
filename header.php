@@ -40,7 +40,14 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
+					<?php
+					  wp_nav_menu( array(
+							'menu_class' => 'navbar-nav ml-auto',
+							'theme_location' => 'main-menu',
+							'container' => false
+						) );
+					?>
+				<!--	<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
 							<a class="nav-link" href="index.html">Home</a>
 						</li>
@@ -50,10 +57,8 @@
 						<li class="nav-item">
 							<a class="nav-link" href="contact.html">Contact</a>
 						</li>
-					</ul>
+					</ul>-->
 				</div>
 			</div>
 		</nav>
 	</header>
-
-?>
