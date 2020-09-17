@@ -10,7 +10,7 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'post col-md-6'); ?>>
   <?php if ( has_post_thumbnail () ) : ?>
     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="post-thumbnail">
-      <?php the_post_thumbnail( 'full', array( 'class' => 'img-responsive' ) ); ?>
+      <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
     </a>
   <?php endif; ?>
   <article class="post-excerpt">
@@ -24,6 +24,6 @@
         bootstrap_post_meta();
       ?>
     </header>
-    <?php the_content( __( 'Continue reading', 'bootstrap' ) ); ?>
+    <?php the_content( '<span class="link">' . __( 'Continue reading', 'bootstrap' ) . '</span>' ); ?>
   </article>
 </div>

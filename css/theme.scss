@@ -1,0 +1,302 @@
+/* Colors */
+$white : #f5f5f5;
+
+$primary : #FF2850;
+$secondary : #46C8BE;
+
+$body-bg: $secondary;
+$body-color: $white;
+
+$gray-100: #e7eae9;
+$gray-200: #cfd4d4;
+$gray-300: #b7bfbe;
+$gray-400: #9fa9a8;
+$gray-500: #879493;
+$gray-600: #6e7e7d;
+$gray-700: #566967;
+$gray-800: #3e5351;
+$gray-900: #263e3c;
+$black: #0e2826;
+
+/* Links */
+$link-color: $primary;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none;
+
+
+/* Spacers */
+$spacer: 7px;
+$spacer-1-2: $spacer / 2;
+$spacer-1: $spacer;
+$spacer-2: $spacer * 2;
+$spacer-3: $spacer * 3;
+$spacer-4: $spacer * 4;
+$spacer-5: $spacer * 5;
+$spacer-50: $spacer * 7;
+$spacer-100: $spacer * 14;
+$spacer-200: $spacer * 26;
+$spacers: (
+  0: 0,
+  1-2: $spacer-1-2,
+  1: $spacer-1,
+  2: $spacer-2,
+  3: $spacer-3,
+  4: $spacer-4,
+  5: $spacer-5,
+  50: $spacer-50,
+  100: $spacer-100,
+  200: $spacer-200
+);
+
+/* Typography */
+html {
+  font-size: 17.5px;
+}
+$font-family-base: 'Roboto', sans-serif;
+$headings-font-family: 'Raleway', sans-serif;
+$font-weight-bolder: 900;
+$headings-font-weight: $font-weight-bolder;
+$headings-margin-bottom: $spacer-2;
+$display1-weight: $font-weight-bolder;
+$display2-weight: $font-weight-bolder;
+$display3-weight: $font-weight-bolder;
+$display4-weight: $font-weight-bolder;
+
+/* Options */
+$enable-responsive-font-sizes: true;
+
+/* Vars -> Navbar */
+$navbar-nav-link-padding-x: ($spacer-2);
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: $white;
+$navbar-dark-active-color: $white;
+$navbar-dark-disabled-color: rgba($white, .5);
+$navbar-dark-toggler-border-color: $primary;
+
+/* Var -> Jumbotron */
+$jumbotron-bg: transparent;
+
+/* List Group */
+$list-group-bg: transparent;
+$list-group-border-color: $white;
+
+/* Additonal var */
+$transition-speed: .4s;
+
+/*
+ * Import Bootstrap
+ */
+@import "../bower_components/bootstrap/scss/bootstrap.scss";
+
+
+
+/*
+ * General Reset
+ */
+button:focus {
+  outline: none;
+}
+
+/*
+ * Custom Code
+ */
+
+/* General */
+html {
+  height: 100%;
+}
+body {
+  background-image: url("../img/bg-pattern.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Links */
+.link, .sidebar li {
+  background-color: rgba($light, .5);
+  padding: $spacer-1-2 $spacer;
+  border-radius: $border-radius;
+  transition: background-color $transition-speed;
+}
+.link:hover, .sidebar li:hover {
+  background-color: rgba($light, 1);
+}
+
+/*
+ * Navbar
+ */
+.navbar-brand, .navbar-nav {
+  font-weight: $font-weight-bolder;
+  font-family: $headings-font-family;
+}
+
+.navbar-nav .nav-link {
+  background-color: $primary;
+  padding: ($spacer-1-2) ($spacer);
+  margin-bottom: $spacer;
+  border-radius: $border-radius;
+}
+.navbar-nav .nav-link:hover {
+  background-color: theme-color-level( "primary", 2 );
+}
+
+.navbar-nav .nav-item:first-child .nav-link {
+  margin-top: $spacer;
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-nav .nav-item .nav-link {
+    background-color: transparent !important;
+    padding: $spacer $navbar-nav-link-padding-x;
+    margin-top: 0 !important;
+  }
+  .navbar-nav .nav-link:after {
+    content: '/';
+    margin-left: $spacer-4;
+  }
+  .navbar-nav .nav-item:last-child .nav-link:after {
+    content: none;
+  }
+}
+
+/* Navbar Toggle */
+.navbar-toggler {
+  background-color: $primary;
+}
+
+/*
+ * Portfolio
+ */
+
+/* Portfolio Nav */
+.portfolio-title {
+  padding: $nav-link-padding-y $nav-link-padding-x;
+}
+.nav-pills .nav-link,
+.nav-pills span {
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: $spacer;
+  margin-bottom: $spacer;
+}
+.nav-pills .nav-link:hover {
+  background-color: $primary;
+}
+
+/* Portfolio items */
+figure {
+  margin-bottom: $spacer-5;
+}
+.portfolio-item img {
+  border-radius: $border-radius-lg;
+  transition: box-shadow $transition-speed;
+
+}
+.portfolio-item:hover img {
+  box-shadow: $spacer-1-2 $spacer-1-2 $spacer-2 rgba($gray-900, .6);
+}
+
+/*
+ * Footer
+ */
+.contact-item {
+  font-size: $font-size-lg;
+  margin-bottom: $spacer-3;
+  span {
+    padding-left: $spacer-2;
+    font-weight: $font-weight-bold;
+  }
+}
+
+/*
+ * Modal
+ */
+
+/* Modal container */
+.modal-content {
+  border: none;
+}
+
+/* Modal - close button */
+#img-modal .close {
+  top: 10px;
+  right: 10px;
+  line-height: 16px;
+}
+
+#img-modal .close span {
+  color: white;
+  text-shadow: 0px 0px 6px black;
+}
+
+#img-modal img {
+  width: 100%;
+}
+
+/* Modal overlay */
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+/*
+ * Blog archive page
+ */
+
+/* Blog archive item */
+.post {
+  margin-bottom: $spacer-5;
+}
+
+.post img {
+  border-radius: $border-radius-lg;
+  transition: box-shadow $transition-speed;
+  margin-bottom: $spacer-3;
+
+}
+
+.post:hover img {
+  box-shadow: $spacer-1-2 $spacer-1-2 $spacer-2 rgba($gray-900, .6);
+}
+
+.post a {
+  transition: color $transition-speed;
+}
+
+.post a:hover {
+  text-decoration: none;
+}
+
+/*
+ * Sidebar
+ */
+.sidebar {
+  margin-bottom: $spacer-50;
+}
+.widget {
+  margin-bottom: $spacer-5;
+}
+.sidebar .widget:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar -> List */
+
+.sidebar ul {
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  list-style: none;
+  margin-bottom: $spacer-2;
+}
+
+/*
+ * Contact form
+ */
+.contact-form {
+  background-color: $primary;
+  padding: $spacer-3;
+  border-radius: $border-radius-lg;
+}

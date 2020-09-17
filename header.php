@@ -26,6 +26,9 @@
    <link rel="shortcut icon" href="<?php echo $favicon; ?>">
    <link rel="apple-touch-icon-precomposed" href="<?php echo $touchicon; ?>" size="180x180">
 
+	 <!-- Load font -->
+	 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -44,20 +47,11 @@
 					  wp_nav_menu( array(
 							'menu_class' => 'navbar-nav ml-auto',
 							'theme_location' => 'main-menu',
-							'container' => false
+							'container' => false,
+							'container_aria_label' => 'Website Navigation',
+
 						) );
 					?>
-				<!--	<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="blog.html">Blog</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contact.html">Contact</a>
-						</li>
-					</ul>-->
 				</div>
 			</div>
 		</nav>
