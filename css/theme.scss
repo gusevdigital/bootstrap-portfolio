@@ -114,13 +114,13 @@ body {
 }
 
 /* Links */
-.link, .sidebar li {
+.link, .sidebar li a {
   background-color: rgba($light, .5);
   padding: $spacer-1-2 $spacer;
   border-radius: $border-radius;
   transition: background-color $transition-speed;
 }
-.link:hover, .sidebar li:hover {
+.link:hover, .sidebar li:hover a {
   background-color: rgba($light, 1);
 }
 
@@ -299,4 +299,11 @@ figure {
   background-color: $primary;
   padding: $spacer-3;
   border-radius: $border-radius-lg;
+}
+
+/*
+ * Recent Projects
+ */
+.recent-projects img {
+  margin-bottom: $spacer-3;
 }

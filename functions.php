@@ -178,4 +178,9 @@ if ( ! function_exists( 'bootstrap_scripts' ) ) {
 }
 
 
+
+/* -------------------------------------------------- */
+/* 7. WIDGETS */
+/* -------------------------------------------------- */
+require_once( get_template_directory(). '/include/widgets/widget-recent-projects.php' );
 ?>
