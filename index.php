@@ -31,7 +31,7 @@ get_header();
     <div class="row">
       <aside class="col-lg-3 offset-lg-1 sidebar order-lg-2">
         <?php get_sidebar(); ?>
-      </aside>
+      </aside> <!-- end sidebar -->
       <div class="col-lg-8 posts order-lg-1">
         <div class="row">
           <?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
@@ -47,7 +47,7 @@ get_header();
             bootstrap_numbered_pagination();
           ?>
         </div>
-      </div>
+      </div> <!-- end col -->
     </div> <!-- end row -->
   </div> <!-- end container-fluid -->
 </section> <!-- end section -->

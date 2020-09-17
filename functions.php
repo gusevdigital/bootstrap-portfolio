@@ -105,21 +105,22 @@ if ( ! function_exists( 'bootstrap_numbered_pagination' ) ) {
       'prev_next' => false,
       /* There are more type: list and playing (jsut strings of number) */
       /* Use array if need to go through each one with custom markup */
-      'type' => 'array'
+      'type' => 'array',
+      'before_page_number' => '<span class="page-link">',
+      'after_page_number' => '</span>'
     );
 
     /* paginate_links() - wordpress function */
     echo '<div class="col-12"><nav aria-label="Page navigation example">';
     $pagination = paginate_links( $args );
-
     if ( is_array( $pagination ) ) {
       echo '<ul class="pagination">';
       foreach ($pagination as $page) {
         /* find where the word "current" is located in the array of pages */
         if ( strpos( $page, 'current' ) ) {
-          echo '<li class="page-item active"><span class="page-link" href="#">' . $page  . '</span></li>';
+          echo '<li class="page-item active">' . $page  . '</li>';
         } else {
-          echo '<li class="page-item"><span class="page-link" href="#">'.  $page  . '</span></li>';
+          echo '<li class="page-item">'.  $page  . '</li>';
         }
       }
       echo '</ul>';
