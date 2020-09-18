@@ -11,9 +11,11 @@
 */
 
 class Bootstrap_Widget_Recent_Projects extends WP_Widget {
+
   /* Widget name, description, class name. */
   /* Initialize the widget. */
   public function __construct() {
+
     parent::__construct(
       /* id */
       'bootstrap-recent-projects',

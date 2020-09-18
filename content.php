@@ -24,6 +24,8 @@
         bootstrap_post_meta();
       ?>
     </header>
-    <?php the_content( '<span class="link">' . __( 'Continue reading', 'bootstrap' ) . '</span>' ); ?>
+    <?php
+      the_content( '<span class="link">' . __( 'Continue reading', 'bootstrap' ) . '</span>' );
+    ?>
   </article>
 </div>
