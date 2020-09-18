@@ -51,7 +51,6 @@ get_header();
     </div> <!-- end row -->
   </div> <!-- end container-fluid -->
 </section> <!-- end section -->
-
 <?php
   /* Load footer.php */
   get_footer();

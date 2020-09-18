@@ -37,6 +37,9 @@ if ( ! function_exists('bootstrap_theme_setup') ) {
     register_nav_menus( array(
       'main-menu' => __( 'Main Menu', 'bootstrap' )
     ) );
+
+    /* Add image sizes */
+    add_image_size( 'portfolio-thumbnail', 600, 450, true ); // (cropped)
   }
 
   add_action( 'after_setup_theme', 'bootstrap_theme_setup' );

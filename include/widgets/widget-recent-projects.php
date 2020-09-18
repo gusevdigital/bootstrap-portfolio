@@ -49,7 +49,8 @@ class Bootstrap_Widget_Recent_Projects extends WP_Widget {
     $instance = $old_instance;
 
     /* Update values */
-    $instance[ 'title' ] = strip_tags( stripslashes( $new_instance[ 'title' ] ) );
+  //  $instance[ 'title' ] = strip_tags( stripslashes( $new_instance[ 'title' ] ) ;
+    $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( stripslashes( $new_instance['title'] ) ) : '';
 
     return $instance;
   }
