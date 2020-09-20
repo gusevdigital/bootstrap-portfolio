@@ -183,8 +183,21 @@ if ( ! function_exists( 'bootstrap_scripts' ) ) {
 
 
 /* -------------------------------------------------- */
-/* 7. WIDGETS */
+/* 8. WIDGETS */
 /* -------------------------------------------------- */
 require_once( get_template_directory(). '/include/widgets/widget-recent-projects.php' );
 require_once( get_template_directory(). '/include/widgets/widget-about.php' );
+
+
+
+/* -------------------------------------------------- */
+/* 9. VALIDATE FIELD LENGTH */
+/* -------------------------------------------------- */
+if ( ! function_exists( 'bootstrap_validate_length' ) ) {
+  function bootstrap_validate_length( $fieldValue, $minLength ) {
+    return ( strlen( trim( $fieldValue ) ) > $minLength );
+  }
+}
+
+
 ?>
