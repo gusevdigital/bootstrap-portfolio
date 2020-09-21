@@ -166,12 +166,14 @@ if ( ! function_exists( 'bootstrap_scripts' ) ) {
     /* wp_register_script( string $handle, string|bool $src, string[] $deps = array(), string|bool|null $ver = false, bool $in_footer = false ) */
     wp_register_script ( 'bootstrap-js', THEMEROOT . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array( 'jquery' ), false, true);
     wp_register_script ( 'isotope-js', THEMEROOT . '/bower_components/isotope-layout/dist/isotope.pkgd.min.js', array( 'jquery' ), false, true);
-    wp_register_script ( 'main-js', JS . '/main.js', false, false, true);
+    wp_register_script ( 'main-js', JS . '/main.js', array( 'jquery' ), false, true);
+    wp_register_script ( 'validate-js', JS . '/jquery.validate.min.js', array( 'jquery' ), false, true);
 
     /* Load the custom scripts */
     wp_enqueue_script ( 'bootstrap-js' );
     wp_enqueue_script ( 'isotope-js' );
     wp_enqueue_script ( 'main-js' );
+    wp_enqueue_script ( 'validate-js' );
 
     /* Load the stylesheets. */
     wp_enqueue_style( 'bootstrap-css', THEMEROOT . '/bower_components/bootstrap/dist/css/bootstrap.min.css' );

@@ -95,10 +95,11 @@ get_header();
               <?php _e( 'Sorry, it seems there was an error.', 'bootstrap' ); ?>
             </div> <!-- end alert -->
           <?php endif; ?>
-          <form class="contact-form" action="<?php the_permalink(); ?>" method="post" novalidate>
+          <form class="contact-form validation" action="<?php the_permalink(); ?>" method="post" novalidate>
             <div class="form-group">
               <label for="contact-name"><?php _e( 'Your name *', 'bootstrap' ); ?></label>
               <input type="text" name="cName" class="form-control<?php if( isset( $errors[ 'errorName' ] ) ) echo ' is-invalid';?>" id="contact-name" placeholder="<?php _e( 'Enter your name', 'bootstrap' ); ?>" value="<?php if ( isset( $_POST[ 'cName' ] ) ) echo $_POST[ 'cName' ]; ?>" />
+              <div class="invalid-feedback"></div>
               <?php if( isset( $errors[ 'errorName' ] ) ) : ?>
                 <div class="invalid-feedback">
                   <?php echo $errors[ 'errorName' ]; ?>
@@ -108,6 +109,7 @@ get_header();
             <div class="form-group">
               <label for="contactEmail"><?php _e( 'Your Email *', 'bootstrap' ); ?></label>
               <input type="email" name="cEmail" class="form-control<?php if( isset( $errors[ 'errorEmail' ] ) ) echo ' is-invalid'; ?>" id="contactEmail" placeholder="<?php _e( 'Enter your email', 'bootstrap' ); ?>" value="<?php if ( isset( $_POST[ 'cEmail' ] ) ) echo $_POST[ 'cEmail' ]; ?>"/>
+              <div class="invalid-feedback"></div>
               <?php if( isset( $errors[ 'errorEmail' ] ) ) : ?>
                 <div class="invalid-feedback">
                   <?php echo $errors[ 'errorEmail' ]; ?>
@@ -117,6 +119,7 @@ get_header();
             <div class="form-group">
               <label for="contactMessage"><?php _e( 'Your message *', 'bootstrap' ); ?></label>
               <textarea name="cMessage" class="form-control<?php if ( isset( $errors[ 'errorMessage' ] ) ) echo ' is-invalid'; ?>" id="contactMessage" rows="3"><?php if ( isset( $_POST[ 'cMessage' ] ) ) echo $_POST[ 'cMessage' ]; ?></textarea>
+              <div class="invalid-feedback"></div>
               <?php if( isset( $errors[ 'errorMessage' ] ) ) : ?>
                 <div class="invalid-feedback">
                   <?php echo $errors[ 'errorMessage' ]; ?>
