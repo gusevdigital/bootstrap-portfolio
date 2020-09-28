@@ -1,9 +1,9 @@
 <?php
 /*
 # ===================================================
-# index.php
+# functions.php
 #
-# The main template file.
+# The theme functions file.
 # ===================================================
 */
 
